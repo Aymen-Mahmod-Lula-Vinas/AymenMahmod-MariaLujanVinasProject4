@@ -6,9 +6,17 @@
 
 // DOES THE LOGIC USED ABOVE MAKE ANY SENSE?
 
+let userSelection = $('.button').attr('id');
 
-
-
+$('document').ready(function(){
+    $('.button').on('click', function(){
+        
+        console.log(userSelection);
+        
+    });
+  });
+  
+    
 const cocktailApp = {};
 
 cocktailApp.key = '1';
@@ -75,4 +83,3 @@ cocktailApp.showResults = (drink) => {
 $(function() {
     cocktailApp.getCategories();
 })
-
