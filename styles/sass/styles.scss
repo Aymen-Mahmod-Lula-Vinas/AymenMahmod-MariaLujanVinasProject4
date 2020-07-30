@@ -1,8 +1,8 @@
 @import 'setup';
-@import 'variables';
-@import 'header';
-@import 'footer';
-@import 'mediaQueries';
+// @import 'variables';
+// @import 'header';
+// @import 'footer';
+// @import 'mediaQueries';
 
 
 body {
@@ -11,11 +11,6 @@ body {
   color:white;
   background-color: black;
   padding:0;
-  display:flex;
-  width: 100vw;
-  height:100vh;
-  justify-content: center;
-  align-items: center;
   
 }
 
@@ -25,13 +20,22 @@ body {
   margin: 0 auto;
   width:80%;
   overflow: hidden;
+
 }
 
 
 
 main {
-  background: #333;
+  background-color: #333;
   color: #fff;
+}
+
+
+header{
+  background-image: url('assets/lightsNight.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -40,13 +44,14 @@ main {
   width:35%;
   margin: 0 auto;
   background-color: white;
-}
 
-img{
-display: block;
-width: 100%;
-margin: 0 auto;
-padding: 20px 20px 100px 20px;
+
+  img{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 100px 20px;
+  }
 }
 
 
@@ -78,18 +83,17 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
 
-}
 
-
-li {
-  
-  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  margin: 25px 0;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  li {
+    
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin: 25px 0;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .userChoice {
@@ -100,7 +104,7 @@ li {
   justify-content: space-around;
   flex-wrap: wrap;
   margin:100px auto;
-  border: 2px solid black;
+  
   border-radius: 20px;
 }
 
@@ -112,6 +116,8 @@ li {
   text-transform: uppercase;
   width:40%;
   border-radius: 20px;
+  box-shadow: 0 0 10px 2px;
+  font-weight: bold;
 }
 
 .button p{
@@ -124,4 +130,10 @@ li {
   cursor: pointer;
   color:black;
   
+}
+
+
+
+.showHere{
+  display: none;
 }

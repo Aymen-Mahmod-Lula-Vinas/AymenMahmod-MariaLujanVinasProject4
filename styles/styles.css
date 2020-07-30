@@ -158,30 +158,30 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 body {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 20px;
-  background-color: black;
   font-family: 'Raleway', sans-serif;
-}
-
-main {
-  background: #333;
-  color: #fff;
-}
-
-body {
+  font-size: 20px;
   color: white;
+  background-color: black;
+  padding: 0;
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 50px;
+  width: 80%;
   overflow: hidden;
 }
 
+main {
+  background-color: #333;
+  color: #fff;
+}
+
 header {
-  background-image: url("lightsNight.jpg");
+  background-image: url("assets/lightsNight.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .imageDrink {
@@ -190,7 +190,7 @@ header {
   background-color: white;
 }
 
-img {
+.imageDrink img {
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -227,7 +227,7 @@ ul {
   grid-gap: 10px;
 }
 
-li {
+ul li {
   -webkit-box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -259,7 +259,6 @@ li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 100px auto;
-  border: 2px solid black;
   border-radius: 20px;
 }
 
@@ -271,6 +270,9 @@ li {
   text-transform: uppercase;
   width: 40%;
   border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 2px;
+          box-shadow: 0 0 10px 2px;
+  font-weight: bold;
 }
 
 .button p {
@@ -281,4 +283,8 @@ li {
   background-color: #F4D35E;
   cursor: pointer;
   color: black;
+}
+
+.showHere {
+  display: none;
 }
