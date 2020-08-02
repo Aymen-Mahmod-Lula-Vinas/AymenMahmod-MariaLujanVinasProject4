@@ -157,24 +157,48 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
   color: white;
   background-color: black;
   padding: 0;
+  margin: 0;
 }
 
 .wrapper {
   max-width: 1280px;
-  margin: 0 auto;
   width: 80%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-main {
-  background-color: #333;
+h1,
+h2 {
+  text-align: center;
+  letter-spacing: 2.5px;
+  margin: 40px 0;
+  font-family: "Shadows Into Light", cursive;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #F4D35E;
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 5rem;
   color: #fff;
+}
+
+p {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 
 header {
@@ -184,36 +208,39 @@ header {
   background-position: center;
 }
 
-.imageDrink {
-  width: 35%;
-  margin: 0 auto;
-  background-color: white;
+.userChoice {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 100px auto;
+  border-radius: 20px;
 }
 
-.imageDrink img {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 20px 100px 20px;
-}
-
-h1,
-h2 {
+.button {
+  background-color: black;
   text-align: center;
-  color: #fff;
-  font-size: 70px;
-  letter-spacing: 2.5px;
-  margin: 50px 0;
-  font-family: 'Shadows Into Light', cursive;
-}
-
-h1 {
+  margin: 30px 0;
+  padding: 20px 0;
   text-transform: uppercase;
-  color: #F4D35E;
+  width: 40%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 2px;
+          box-shadow: 0 0 10px 2px;
+  font-weight: bold;
 }
 
-h2 {
-  font-size: 45px;
+.button:hover {
+  background-color: #f78764;
+  cursor: pointer;
+  color: black;
 }
 
 ul {
@@ -245,46 +272,86 @@ ul li {
           justify-content: center;
 }
 
-.userChoice {
-  background-color: #f78764;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 100px auto;
-  border-radius: 20px;
+.imageDrink {
+  width: 35%;
+  margin: 0 auto;
+  background-color: white;
 }
 
-.button {
+.imageDrink img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 100px 20px;
+}
+
+footer p {
   background-color: black;
   text-align: center;
-  margin: 30px 0;
-  padding: 20px 0;
-  text-transform: uppercase;
-  width: 40%;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 0 10px 2px;
-          box-shadow: 0 0 10px 2px;
-  font-weight: bold;
+  color: #f78764;
+  letter-spacing: 1px;
+  font-size: 2rem;
 }
 
-.button p {
-  font-size: 25px;
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+  }
+  .userChoice {
+    width: 100%;
+  }
 }
 
-.button:hover {
-  background-color: #F4D35E;
-  cursor: pointer;
-  color: black;
+@media (max-width: 650px) {
+  h1 {
+    font-size: 6rem;
+  }
+  .userChoice {
+    margin: 40px auto;
+  }
+  .button {
+    width: 70%;
+  }
+  footer p {
+    font-size: 1.6rem;
+  }
 }
 
-.showHere {
-  display: none;
+@media (max-width: 500px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  .button {
+    width: 85%;
+    padding: 10px 0;
+  }
+  footer p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .userChoice {
+    margin: 20px auto;
+  }
+  .button {
+    width: 90%;
+    padding: 0;
+  }
+  footer p {
+    font-size: 1rem;
+  }
 }

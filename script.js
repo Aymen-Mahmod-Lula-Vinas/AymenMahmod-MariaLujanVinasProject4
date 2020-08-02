@@ -6,21 +6,26 @@
 
 // DOES THE LOGIC USED ABOVE MAKE ANY SENSE?
 
-let userSelection = $('.button').attr('id');
 
-$('document').ready(function(){
-    $('.button').on('click', function(){
+
+// $(document).ready(function(){
+
+//     const alcoholTypes =  $('section#userChoice div p').toArray();
+//     console.log(alcoholTypes);
+
+//     // $('.button').on('click', function(){
+//     //     const userSelection = $(this).text();
+//     //     console.log(userSelection);
         
-        console.log(userSelection);
-        
-    });
-  });
+//     // });
+//   });
   
     
 const cocktailApp = {};
 
 cocktailApp.key = '1';
-cocktailApp.url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+cocktailApp.url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userSelection}';
+
 cocktailApp.getCategories = () => {
     $.ajax({
         url: cocktailApp.url,
@@ -83,3 +88,5 @@ cocktailApp.showResults = (drink) => {
 $(function() {
     cocktailApp.getCategories();
 })
+
+

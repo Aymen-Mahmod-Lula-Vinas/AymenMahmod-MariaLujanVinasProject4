@@ -1,0 +1,39 @@
+// header styles
+
+header {
+    background-image: url('assets/lightsNight.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.userChoice {
+    // background-color: $secondaryColor;
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin:100px auto;
+    border-radius: 20px;
+}
+
+
+.button{
+    background-color: black;
+    text-align: center;
+    margin:30px 0;
+    padding:20px 0;
+    text-transform: uppercase;
+    width:40%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: $secondaryColor;
+    cursor: pointer;
+    color:black;
+}
