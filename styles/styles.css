@@ -273,10 +273,6 @@ header {
   text-align: center;
 }
 
-.gridItem1 {
-  padding-top: 60px;
-}
-
 .gridItem p {
   font-size: 2rem;
   line-height: 40px;
@@ -307,6 +303,16 @@ ul li:before {
   margin: 0 auto;
   padding: 20px 20px 80px 20px;
   opacity: 0.8;
+}
+
+.gridItem1,
+.gridItem2 {
+  width: 100%;
+  margin-bottom: 100px;
+  margin: 0 auto;
+  width: 70%;
+  padding: 0;
+  margin-bottom: 100px;
 }
 
 footer p {

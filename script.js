@@ -1,15 +1,13 @@
 
-// print it on the HTML
 
 // namespace
 const cocktailApp = {};
 let variable = [];
+
 // listen to a click event- user choice- that will return a value. create a variable to store the result
-$(".button").on('click', function(event) {
-    event.preventDefault();
-    // console.log(this.id);
+$(".button").on('click', function() {
+    $("header").hide();
     cocktailApp.userChoice = this.id;
-    // console.log(userChoice);
     cocktailApp.getIngredient(cocktailApp.userChoice);
 });
 
@@ -30,7 +28,6 @@ cocktailApp.getIngredient = (userInput) => {
 }
 
 // second API call: filter API by drink Id) 
-
 cocktailApp.secondApiCall = (drinkId) => {
     $.ajax({
         url: `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`,
@@ -46,59 +43,96 @@ cocktailApp.secondApiCall = (drinkId) => {
 // make an array filled with those attributes
 // for loop length, if null skip it, else add to the array
 cocktailApp.showResults = (drinkObj) => {
-    // console.log(drink);
     // add a remove
         console.log(drinkObj);
         $('.showHere').empty();
+        let ingredient = ''; 
+        for (let i = 1; i <= 15; i++) {
+            const strIngrdient = 'strIngredient' + i;
+            if (drinkObj[0][strIngrdient] != null && drinkObj[0][strIngrdient] !='') {
+                ingredient += `<li>
+                ${drinkObj[0][strIngrdient]}
+                </li>`
+            } else {
+                break;
+            } 
+        }
+
+        let measurement = '';
+        for (let i = 1; i <= 15; i++) {
+            const strMeasure = 'strMeasure' + i;
+            if (drinkObj[0][strMeasure] != null && drinkObj[0][strMeasure] !='') {
+                measurement += `<li>
+                ${drinkObj[0][strMeasure]}
+                </li>`
+            } else {
+                break;
+            }
+        }
+
         $('.showHere').append(`
         <div class= "cocktailName">
             <h2>${drinkObj[0].strDrink}</h2>
         </div>
         <div class="gridContainer">
-            <div class="gridItem imageDrink">
+            <div class= "gridItem gridItem1 button">
+                <p>Different booze</p> 
+            </div>
+            <div class="gridItem gridItem2 button" id="pressMe">
+                <p>give me something else</p>
+            </div>
+            <div class="gridItem gridItem3 imageDrink">
                     <img src=${drinkObj[0].strDrinkThumb} />
             </div>
-            <div class= "gridItem gridItem1">
-                <h3>What you will need:</h3>
-                <ul>
-                    <li>
-                    ${drinkObj[0].strIngredient1}
-                    </li>
-                    <li>
-                    ${drinkObj[0].strIngredient2}
-                    </li>
-                    <li>
-                    ${drinkObj[0].strIngredient3}
-                    </li>
-                    <li>
-                    ${drinkObj[0].strIngredient4}
-                    </li>
-                </ul>
-            </div>
-            <div class= "gridItem">
+            <div class= "gridItem gridItem3">
                 <h3>This is how you'll make it:</h2>
                 <p>${drinkObj[0].strInstructions}</p>
             </div>
-            <div class= "gridItem">
+            <div class= "gridItem gridItem5">
+                <h3>What you will need:</h3>
+                <ul>
+                    ${ingredient}
+                </ul>
+            </div>
+            <div class= "gridItem gridItem6">
                 <h3>Measurements?</h2>
-                <p>Tailor it to your liking!</p> 
+                <ul>
+                    ${measurement}
+                </ul>
             </div>
         </div>    
     `);
+    $(".gridItem1").on('click', function() {
+        
+        $("header").show();
+        $("header").location.reload();     
+        $('.showHere').hide();
+    });
+    
 }
+
+
+
+
+
+$('body').on('click', '#pressMe', function(event) {
+    event.preventDefault();
+    cocktailApp.getIngredient(cocktailApp.userChoice);
+})
+
 
 $(function() {
 })
 // init function to start everything
 cocktailApp.init = function(){
-  cocktailApp.getIngredient();
-  
+    cocktailApp.getIngredient();
+
 
 }
 // doc ready
 $(function(){
-  cocktailApp.init();
-  
+    cocktailApp.init();
+
 })
 
 
