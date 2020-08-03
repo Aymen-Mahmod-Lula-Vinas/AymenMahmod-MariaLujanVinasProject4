@@ -51,35 +51,39 @@ cocktailApp.showResults = (drinkObj) => {
         console.log(drinkObj);
         $('.showHere').empty();
         $('.showHere').append(`
-        <div>
+        <div class= "cocktailName">
             <h2>${drinkObj[0].strDrink}</h2>
         </div>
-        <h3>What you will need:</h3>
-        <ul>
-            <li>
-            ${drinkObj[0].strIngredient1}
-            </li>
-            <li>
-            ${drinkObj[0].strIngredient2}
-            </li>
-            <li>
-            ${drinkObj[0].strIngredient3}
-            </li>
-            <li>
-            ${drinkObj[0].strIngredient4}
-            </li>
-        </ul>
-        <div>
-            <h3>This is how you'll make it:</h2>
-            <p>${drinkObj[0].strInstructions}</p>
-        </div>
-        <div class="imageDrink">
-            <img src=${drinkObj[0].strDrinkThumb} />
-        </div>
-        <div>
-            <h3>Measurements?</h2>
-            <p>Tailor it to your liking!</p> 
-        </div>
+        <div class="gridContainer">
+            <div class="gridItem imageDrink">
+                <img src=${drinkObj[0].strDrinkThumb} />
+            </div>
+            <div class= "gridItem">
+                <h3>What you will need:</h3>
+                <ul>
+                    <li>
+                    ${drinkObj[0].strIngredient1}
+                    </li>
+                    <li>
+                    ${drinkObj[0].strIngredient2}
+                    </li>
+                    <li>
+                    ${drinkObj[0].strIngredient3}
+                    </li>
+                    <li>
+                    ${drinkObj[0].strIngredient4}
+                    </li>
+                </ul>
+            </div>
+            <div class= "gridItem">
+                <h3>This is how you'll make it:</h2>
+                <p>${drinkObj[0].strInstructions}</p>
+            </div>
+            <div class= "gridItem">
+                <h3>Measurements?</h2>
+                <p>Tailor it to your liking!</p> 
+            </div>
+        </div>    
     `);
 }
 
