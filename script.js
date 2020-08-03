@@ -56,9 +56,9 @@ cocktailApp.showResults = (drinkObj) => {
         </div>
         <div class="gridContainer">
             <div class="gridItem imageDrink">
-                <img src=${drinkObj[0].strDrinkThumb} />
+                    <img src=${drinkObj[0].strDrinkThumb} />
             </div>
-            <div class= "gridItem">
+            <div class= "gridItem gridItem1">
                 <h3>What you will need:</h3>
                 <ul>
                     <li>

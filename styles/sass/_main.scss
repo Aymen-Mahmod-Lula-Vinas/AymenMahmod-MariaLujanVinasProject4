@@ -1,9 +1,5 @@
 // Main styles
 
-main {
-    padding-bottom: 50px;
-}
-
 
 .cocktailName h2{
     color: $secondaryColor;
@@ -15,25 +11,31 @@ main {
     margin: 0 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    grid-gap: 50px;
+    grid-gap: 10px;
 }
 
 
 
 .gridItem {
-    margin: 20px auto;
+    margin: 30px auto;
+    padding-bottom: 30px;
 
     h3{
         font-family: $headingFont;
         font-size: 4rem;
-        margin:0;
+        margin: 30px 0;
         text-align: center;
     }
+}
+
+.gridItem1 {
+    padding-top:60px;
 }
 
 .gridItem p{
     font-size: 2rem;
     line-height: 40px;
+    text-align: center;
 }
 
 ul {
@@ -44,17 +46,17 @@ ul {
 
 
     li {
-        margin: 30px 0;
+        margin: 20px 0;
         }
     }
 
     ul li:before {
         content: '✓';
-      }
+    }
+
 
 .imageDrink {
-    width:100%;
-    // margin: 0 auto;
+    width:70%;
     background-color: white;
 
 
@@ -62,9 +64,12 @@ ul {
         display: block;
         width: 100%;
         margin: 0 auto;
-        padding: 20px 20px 100px 20px;
-        }
+        padding: 20px 20px 80px 20px;
+        opacity:0.8;
+
     }
+}
+
     
 
 // .showHere {
