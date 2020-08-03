@@ -1,7 +1,7 @@
 // header styles
 
 header {
-    background-image: url('assets/lightsNight.jpg');
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.2), rgba(255, 255, 255, 0.3)), url(assets/lightsNight.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,7 +9,7 @@ header {
 
 
 .userChoice {
-    // background-color: $secondaryColor;
+    background-color: rgba(247, 135, 100, 0.7);
     width:80%;
     display:flex;
     align-items: center;
@@ -33,7 +33,7 @@ header {
 }
 
 .button:hover{
-    background-color: $secondaryColor;
+    background-color: $primaryColor;
     cursor: pointer;
     color:black;
 }

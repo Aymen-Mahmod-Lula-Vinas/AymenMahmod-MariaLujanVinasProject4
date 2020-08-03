@@ -32,7 +32,7 @@ body {
 h1,
 h2 {
     text-align: center;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
     margin:40px 0;
     font-family: $headingFont;
 }
@@ -41,11 +41,13 @@ h1{
     text-transform: uppercase;
     color: $primaryColor;
     font-size: 7rem;
+    text-shadow: 5px 5px 5px black;
 }
 
 h2 {
     font-size: 5rem;
     color: #fff;
+    text-shadow: 5px 5px 5px black;
 }
 
 

@@ -21,7 +21,7 @@ cocktailApp.getIngredient = (userInput) => {
         dataType: 'json',
     }).then((res) => {
       //  display 3 cocktails containing the selected type of alcohol
-        for (let i = 0; i <= 3; i++) {
+        for (let i = 0; i <= (res.drinks.length); i++) {
             // console.log(res.drinks[i]);
             cocktailApp.firstDrink = res.drinks[i].idDrink;
             cocktailApp.secondApiCall(cocktailApp.firstDrink);
@@ -49,6 +49,7 @@ cocktailApp.showResults = (drinkObj) => {
     // console.log(drink);
     // add a remove
         console.log(drinkObj);
+        $('.showHere').empty();
         $('.showHere').append(`
         <div>
             <h2>${drinkObj[0].strDrink}</h2>
