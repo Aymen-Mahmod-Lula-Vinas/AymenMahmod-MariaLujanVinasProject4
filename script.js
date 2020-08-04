@@ -6,7 +6,7 @@ let variable = [];
 
 // listen to a click event- user choice- that will return a value. create a variable to store the result
 $(".button").on('click', function() {
-    $('html, body').animate({scrollTop:1100},'slow');
+    $('html, body').animate({scrollTop:1050},'slow');
     cocktailApp.userChoice = this.id;
     cocktailApp.getIngredient(cocktailApp.userChoice);
 });
@@ -103,12 +103,12 @@ cocktailApp.showResults = (drinkObj) => {
         </div>  
     `);
 
-    $(".gridItem1").on('click', function() {
+    // $(".gridItem1").on('click', function() {
         
-        $("header").show();
-        $("header").reload();     
-        $('.showHere').hide();
-    });
+    //     $("header").show();
+    //     $("header").reload();     
+    //     $('.showHere').hide();
+    // });
     
 }
 
@@ -116,7 +116,7 @@ cocktailApp.showResults = (drinkObj) => {
 $('body').on('click', '#pressMe', function(event) {
     event.preventDefault();
     cocktailApp.getIngredient(cocktailApp.userChoice);
-    $('html, body').animate({scrollTop:1100},'slow');
+    $('html, body').animate({scrollTop:1000},'slow');
 })
 
 $('body').on('click', '#return', function(event) {
