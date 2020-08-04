@@ -1,12 +1,10 @@
-
-
 // namespace
 const cocktailApp = {};
 let variable = [];
 
 // listen to a click event- user choice- that will return a value. create a variable to store the result
 $(".button").on('click', function() {
-    $('html, body').animate({scrollTop:1100},'slow');
+    $('html, body').animate({scrollTop:1050},'slow');
     cocktailApp.userChoice = this.id;
     cocktailApp.getIngredient(cocktailApp.userChoice);
 });
@@ -95,28 +93,20 @@ cocktailApp.showResults = (drinkObj) => {
                 </ul>
             </div>
             <div class="gridItem gridItem2 button" id="pressMe">
-                <p>Shuffle selected booze category</p>
+                <p>Shuffle this booze category</p>
             </div>
             <div class= "gridItem gridItem1 button" id="return">
                 <p>Try a different booze</p> 
             </div>  
         </div>  
     `);
-
-    $(".gridItem1").on('click', function() {
-        
-        $("header").show();
-        $("header").reload();     
-        $('.showHere').hide();
-    });
-    
 }
 
 
 $('body').on('click', '#pressMe', function(event) {
     event.preventDefault();
     cocktailApp.getIngredient(cocktailApp.userChoice);
-    $('html, body').animate({scrollTop:1100},'slow');
+    $('html, body').animate({scrollTop:1000},'slow');
 })
 
 $('body').on('click', '#return', function(event) {
@@ -140,14 +130,5 @@ $(function(){
     cocktailApp.init();
 
 })
-
-
-
-
-
-
-
-
-
 
 
