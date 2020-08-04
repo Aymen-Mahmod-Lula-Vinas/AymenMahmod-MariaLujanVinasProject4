@@ -8,9 +8,9 @@
 
 
 .gridContainer {
-    margin: 0 20px;
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 10px;
 }
 
@@ -19,41 +19,42 @@
 .gridItem {
     margin: 30px auto;
     padding-bottom: 30px;
+    
 
     h3{
         font-family: $headingFont;
         font-size: 4rem;
-        margin: 30px 0;
+        margin: 0;
         text-align: center;
+        letter-spacing: 2px;
     }
 }
 
 
 .gridItem p{
-    font-size: 2rem;
     line-height: 40px;
     text-align: center;
 }
 
 ul {
-    // margin: 0;
     padding: 0;
     list-style-type: none;
-   
 
 
     li {
         margin: 20px 0;
+        font-size:2.3rem;
         }
     }
 
-    ul li:before {
-        content: '✓';
-    }
+
+ul li:before {
+    content: '✓';
+}
 
 
 .imageDrink {
-    width:70%;
+    width:75%;
     background-color: white;
 
 
@@ -67,13 +68,14 @@ ul {
     }
 }
 
-
 .gridItem1,
 .gridItem2 {
     width:100%;
-    margin-bottom: 100px;
-    margin: 0 auto;
     width: 70%;
     padding: 0;
     margin-bottom: 100px;
+
+    p {
+        font-size: 1.7rem;
+    }
 }

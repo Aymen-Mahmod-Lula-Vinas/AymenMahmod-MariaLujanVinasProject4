@@ -98,10 +98,11 @@ cocktailApp.showResults = (drinkObj) => {
                 <p>Shuffle selected booze category</p>
             </div>
             <div class= "gridItem gridItem1 button" id="return">
-                <p>Different booze</p> 
+                <p>Try a different booze</p> 
             </div>  
         </div>  
     `);
+
     $(".gridItem1").on('click', function() {
         
         $("header").show();
@@ -110,9 +111,6 @@ cocktailApp.showResults = (drinkObj) => {
     });
     
 }
-
-
-
 
 
 $('body').on('click', '#pressMe', function(event) {

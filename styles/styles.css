@@ -169,6 +169,12 @@ body {
   background-color: black;
   padding: 0;
   margin: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4))), url("assets/lightsNight.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("assets/lightsNight.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .wrapper {
@@ -189,25 +195,20 @@ h2 {
 h1 {
   text-transform: uppercase;
   color: #F4D35E;
-  font-size: 7rem;
+  font-size: 6.5rem;
   text-shadow: 6px 6px 6px black;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 5.5rem;
   color: #fff;
   text-shadow: 5px 5px 5px black;
+  letter-spacing: 3px;
 }
 
 p {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   letter-spacing: 1px;
-}
-
-header {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .userChoice {
@@ -246,25 +247,17 @@ header {
   color: black;
 }
 
-body {
-  background-image: url(assets/lightsNight.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .cocktailName h2 {
   color: #f78764;
   margin: 70px 0;
 }
 
 .gridContainer {
-  margin: 0 20px;
+  margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
 }
 
@@ -276,12 +269,12 @@ body {
 .gridItem h3 {
   font-family: "Shadows Into Light", cursive;
   font-size: 4rem;
-  margin: 30px 0;
+  margin: 0;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .gridItem p {
-  font-size: 2rem;
   line-height: 40px;
   text-align: center;
 }
@@ -293,6 +286,7 @@ ul {
 
 ul li {
   margin: 20px 0;
+  font-size: 2.3rem;
 }
 
 ul li:before {
@@ -300,7 +294,7 @@ ul li:before {
 }
 
 .imageDrink {
-  width: 70%;
+  width: 75%;
   background-color: white;
 }
 
@@ -315,11 +309,14 @@ ul li:before {
 .gridItem1,
 .gridItem2 {
   width: 100%;
-  margin-bottom: 100px;
-  margin: 0 auto;
   width: 70%;
   padding: 0;
   margin-bottom: 100px;
+}
+
+.gridItem1 p,
+.gridItem2 p {
+  font-size: 1.7rem;
 }
 
 footer p {

@@ -7,6 +7,7 @@ $primaryColor: #F4D35E;
 $secondaryColor: #f78764;
 
 
+
 html {
     font-size: 62.5%;  
 }
@@ -18,6 +19,12 @@ body {
     background-color: black;
     padding:0;
     margin:0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),url('assets/lightsNight.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    
 }
 
 
@@ -40,18 +47,19 @@ h2 {
 h1{
     text-transform: uppercase;
     color: $primaryColor;
-    font-size: 7rem;
+    font-size: 6.5rem;
     text-shadow: 6px 6px 6px black;
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     color: #fff;
     text-shadow: 5px 5px 5px black;
+    letter-spacing: 3px;
 }
 
 
 p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     letter-spacing: 1px;
 }
