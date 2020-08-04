@@ -190,7 +190,7 @@ h1 {
   text-transform: uppercase;
   color: #F4D35E;
   font-size: 7rem;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 6px 6px 6px black;
 }
 
 h2 {
@@ -205,7 +205,6 @@ p {
 }
 
 header {
-  background-image: url(assets/lightsNight.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -245,6 +244,14 @@ header {
   background-color: #F4D35E;
   cursor: pointer;
   color: black;
+}
+
+body {
+  background-image: url(assets/lightsNight.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .cocktailName h2 {
@@ -316,7 +323,6 @@ ul li:before {
 }
 
 footer p {
-  background-color: black;
   text-align: center;
   color: #f78764;
   letter-spacing: 1px;

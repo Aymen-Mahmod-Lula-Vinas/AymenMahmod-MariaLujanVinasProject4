@@ -6,7 +6,7 @@ let variable = [];
 
 // listen to a click event- user choice- that will return a value. create a variable to store the result
 $(".button").on('click', function() {
-    $("header").hide();
+    $('html, body').animate({scrollTop:1100},'slow');
     cocktailApp.userChoice = this.id;
     cocktailApp.getIngredient(cocktailApp.userChoice);
 });
@@ -75,12 +75,6 @@ cocktailApp.showResults = (drinkObj) => {
             <h2>${drinkObj[0].strDrink}</h2>
         </div>
         <div class="gridContainer">
-            <div class= "gridItem gridItem1 button">
-                <p>Different booze</p> 
-            </div>
-            <div class="gridItem gridItem2 button" id="pressMe">
-                <p>give me something else</p>
-            </div>
             <div class="gridItem gridItem3 imageDrink">
                     <img src=${drinkObj[0].strDrinkThumb} />
             </div>
@@ -100,12 +94,18 @@ cocktailApp.showResults = (drinkObj) => {
                     ${measurement}
                 </ul>
             </div>
-        </div>    
+            <div class="gridItem gridItem2 button" id="pressMe">
+                <p>Shuffle selected booze category</p>
+            </div>
+            <div class= "gridItem gridItem1 button" id="return">
+                <p>Different booze</p> 
+            </div>  
+        </div>  
     `);
     $(".gridItem1").on('click', function() {
         
         $("header").show();
-        $("header").location.reload();     
+        $("header").reload();     
         $('.showHere').hide();
     });
     
@@ -118,7 +118,15 @@ cocktailApp.showResults = (drinkObj) => {
 $('body').on('click', '#pressMe', function(event) {
     event.preventDefault();
     cocktailApp.getIngredient(cocktailApp.userChoice);
+    $('html, body').animate({scrollTop:1100},'slow');
 })
+
+$('body').on('click', '#return', function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop:1},'slow');
+})
+
+
 
 
 $(function() {
