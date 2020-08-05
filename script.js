@@ -55,7 +55,7 @@ cocktailApp.showResults = (drinkObj) => {
                 break;
             } 
         }
-
+// same as above but for measurements
         let measurement = '';
         for (let i = 1; i <= 15; i++) {
             const strMeasure = 'strMeasure' + i;
@@ -67,7 +67,7 @@ cocktailApp.showResults = (drinkObj) => {
                 break;
             }
         }
-
+// append to the dom name, picture, ingredients, instructions, measurements
         $('.showHere').append(`
         <div class= "cocktailName">
             <h2>${drinkObj[0].strDrink}</h2>
@@ -102,13 +102,13 @@ cocktailApp.showResults = (drinkObj) => {
     `);
 }
 
-
+// scroll event when clicking randomize function to scroll up to drinks
 $('body').on('click', '#pressMe', function(event) {
     event.preventDefault();
     cocktailApp.getIngredient(cocktailApp.userChoice);
     $('html, body').animate({scrollTop:1000},'slow');
 })
-
+// scroll event when clicking different booze to go up to the main landing page
 $('body').on('click', '#return', function(event) {
     event.preventDefault();
     $('html, body').animate({scrollTop:1},'slow');
@@ -120,7 +120,7 @@ $('body').on('click', '#return', function(event) {
 $(function() {
 })
 // init function to start everything
-cocktailApp.init = function(){
+    cocktailApp.init = function(){
     cocktailApp.getIngredient();
 
 
